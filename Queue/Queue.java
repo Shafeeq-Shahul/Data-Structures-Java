@@ -59,6 +59,9 @@ public class Queue {
 
     @Override
     public String toString() {
+        if (isEmpty()) {
+            throw new RuntimeException("queue is empty");
+        }
         StringBuilder sb = new StringBuilder();
         Node current = front;
         sb.append("Front->");
@@ -73,3 +76,4 @@ public class Queue {
         return sb.toString().trim();
     }
 }
+
